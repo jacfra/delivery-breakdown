@@ -12,13 +12,9 @@ given the following input:
 
 ```rust
 pub struct ExpensePerMile {
-    pub gas: f32,               // 0.02 = $0.02 per mile
-    pub oil_change: f32,        // 0.02 = $0.02 per mile
-    pub windshield_wipers: f32, // 0.02 = $0.02 per mile
-    pub battery: f32,           // 0.02 = $0.02 per mile
-    pub brake_pads: f32,        // 0.02 = $0.02 per mile
-    pub tires: f32,             // 0.02 = $0.02 per mile
-    pub other: f32,             // 0.02 = $0.02 per mile
+    pub gas: f32,
+    pub maintenance: f32,
+    pub other: f32,
 }
 
 pub struct ExpenseLumpSum {

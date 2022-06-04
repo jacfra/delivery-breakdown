@@ -34,14 +34,18 @@ fn main() {
         miles_per_gallon: 30.0,
     };
 
+    // maintenance
+    // ---------
+    // oil_change - 0.01/mi - every 5,000 miles at $50
+    // windshield_wipers - 0.01/mi -  5,000 miles at $50
+    // battery - 0.01/mi - 10,000 miles at $100
+    // brake_pads - 0.02/mi - 30,000 miles at $400
+    // tires - 0.02/mi - 60,000 miles at $1000
+
     let expense_per_mile = ExpensePerMile {
-        gas: work_configration.price_of_gas_per_gallon / vehicle_configuration.miles_per_gallon, // $0.12,
-        oil_change: 0.01,        // every 5,000 miles at $50
-        windshield_wipers: 0.01, // 5,000 miles at $50
-        battery: 0.01,           // 10,000 miles at $100
-        brake_pads: 0.02,        // 30,000 miles at $400
-        tires: 0.02,             // 60,000 miles at $1000
-        other: 0.02,             // 10,000 miles at $200
+        gas: work_configration.price_of_gas_per_gallon / vehicle_configuration.miles_per_gallon, // $0.12
+        maintenance: 0.07,
+        other: 0.02, // 10,000 miles at $200
     };
 
     let results = calculate_delivery_driver_breakdown(
